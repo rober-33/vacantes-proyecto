@@ -1,0 +1,18 @@
+[
+  {
+    "titulo": "Comercio y Ventas",
+    "descripcion": "Ofertas de empleo en tiendas, supermercados y ventas al por menor.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/1170/1170678.png"
+  },
+  {
+    "titulo": "Gastronomía",
+    "descripcion": "Vacantes para chefs, meseros y personal de cocina.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+  },
+  {
+    "titulo": "Salud y Bienestar",
+    "descripcion": "Oportunidades para médicos, enfermeros y técnicos en salud.",
+    "imagen": "https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+  }
+  // Puedes seguir agregando más
+]

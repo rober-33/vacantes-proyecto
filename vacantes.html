@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jagua_Vision360 - Vacantes Disponibles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .buscador-container {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .buscador-container input {
+      width: 60%;
+      padding: 10px;
+      font-size: 16px;
+      border: 2px solid #003366;
+      border-radius: 8px;
+    }
+
+    .tarjetas-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .tarjeta {
+      width: 250px;
+      padding: 15px;
+      border-radius: 12px;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-5px);
+    }
+
+    .tarjeta img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+    }
+
+    .tarjeta h3 {
+      font-size: 18px;
+      color: #003366;
+    }
+
+    @media (max-width: 600px) {
+      .tarjeta {
+        width: 90%;
+      }
+
+      .buscador-container input {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jagua_Vision360 - Vacantes Disponibles</h1>
+  </header>
+
+  <div class="buscador-container">
+    <input type="text" id="buscador" placeholder="Buscar vacantes por categoría..." onkeyup="filtrarTarjetas()"/>
+  </div>
+
+  <div class="tarjetas-container" id="contenedorTarjetas">
+
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" alt="Comercio" /><h3>Vacantes en Comercio y Ventas</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" alt="Gastronomía" /><h3>Vacantes en Gastronomía</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png" alt="Salud" /><h3>Vacantes en Salud y Bienestar</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2683/2683526.png" alt="Educación" /><h3>Vacantes en Educación</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/860/860814.png" alt="Transporte" /><h3>Vacantes en Transporte</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Servicios Técnicos" /><h3>Vacantes Técnicas y Profesionales</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1077/1077081.png" alt="Entretenimiento" /><h3>Vacantes en Cultura y Medios</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3448/3448573.png" alt="Turismo" /><h3>Vacantes en Turismo y Hotelería</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt="Financieros" /><h3>Vacantes Financieras y Jurídicas</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Medio Ambiente" /><h3>Vacantes en Medio Ambiente</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2937/2937309.png" alt="Agroindustria" /><h3>Vacantes Agroindustriales</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/893/893257.png" alt="Construcción" /><h3>Vacantes en Construcción</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3855/3855675.png" alt="Belleza" /><h3>Vacantes en Belleza</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/2921/2921822.png" alt="Mantenimiento" /><h3>Vacantes de Mantenimiento</h3></div>
+    <div class="tarjeta"><img src="https://cdn-icons-png.flaticon.com/512/3063/3063828.png" alt="Energía" /><h3>Vacantes en Energía</h3></div>
+
+  </div>
+
+  <script>
+    function filtrarTarjetas() {
+      const input = document.getElementById("buscador").value.toLowerCase();
+      const tarjetas = document.getElementsByClassName("tarjeta");
+
+      for (let tarjeta of tarjetas) {
+        const texto = tarjeta.innerText.toLowerCase();
+        tarjeta.style.display = texto.includes(input) ? "block" : "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+]
